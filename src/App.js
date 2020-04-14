@@ -20,7 +20,6 @@ class App extends Component{
   }
   render(){
     const {data, country} = this.state;
-    console.log(data)
     return (
       <div className={styles.container}>
         <img className={StyleSheet.image} src={coronaImage} alt="covid-19" />

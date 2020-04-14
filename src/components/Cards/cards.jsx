@@ -3,6 +3,7 @@ import {Card, CardContent, Grid, Typography} from '@material-ui/core';
 import styles from './cards.module.css';
 import CountUP from 'react-countup';
 import cx from 'classnames';
+
 const Cards = ({data}) => {
 
     if(!Object.keys(data).length){

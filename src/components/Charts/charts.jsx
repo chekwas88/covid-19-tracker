@@ -14,7 +14,7 @@ const Charts = ({data, country}) => {
     }, [])
 
     const LineChart = (
-       dailydata.length &&  (<Line 
+       dailydata.length ?  <Line 
             data={{
                 labels: dailydata.map(({date}) => date),
                 datasets: [{
@@ -32,11 +32,12 @@ const Charts = ({data, country}) => {
                 }
             ]
             }}
-        />)
+        />: null
     );
 
     const BarChart = (
-        data.confirmed && (<Bar 
+        data.confirmed ?
+        <Bar 
             data={{
                 labels: ['Infected', 'Recovered', 'Deaths'],
                 datasets: [{
@@ -54,18 +55,11 @@ const Charts = ({data, country}) => {
                 title: {display: true, text: `Current state in ${country}`}
             
             }}
-        />)
-    )
+        /> : null
+    );
 
     return (
-        // dailydata.length > 0 &&  (<Line 
-        //     data={{
-        //         labels: '',
-        //         datasets: []
-        //     }}
-        // />)
         <div className={styles.container}>
-           
             {country ? BarChart : LineChart}
         </div>
     )

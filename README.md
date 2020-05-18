@@ -1,4 +1,4 @@
-###  A react-gif-search-app
+###  A react Covid-19 tracker app
 
 
 ## Requirement and Installation

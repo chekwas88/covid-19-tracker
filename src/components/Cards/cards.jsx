@@ -24,7 +24,7 @@ const Cards = ({data}) => {
                             />
                         </Typography>
                         <Typography color='textSecondary'>{new Date(data.lastUpdate).toDateString()}</Typography>
-                        <Typography variant='body2'>Number of active cases</Typography>
+                        <Typography variant='body2'>Number of cases</Typography>
 
                     </CardContent>
                 </Grid>
